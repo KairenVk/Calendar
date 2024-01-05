@@ -1,12 +1,16 @@
 import Task from "./Task";
 
 export default class Day {
+    day: number;
     weekday: string;
     month: number;
     year: number;
     tasks: Task[];
+    key: number;
 
-    constructor(weekday: number, month: number, year: number, tasks: Task[]) {
+    constructor(key: number, day: number, weekday: number, month: number, year: number, tasks: Task[]) {
+        this.key = key;
+        this.day = day;
         switch (weekday) {
             case 0:
                 this.weekday = "Sunday";
